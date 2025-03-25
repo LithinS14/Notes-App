@@ -1,0 +1,79 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e6ff;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9ff;
+  resize: vertical;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+  background-color: white;
+}
+
+.form-control::placeholder {
+  color: #a0a8c0;
+}
+
+.note-form textarea.form-control {
+  min-height: 150px;
+}
+
+.note-form button {
+  align-self: flex-end;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.note-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.note-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+}
+
+.note-form button:hover::before {
+  width: 100%;
+}
+
+.note-form button:active {
+  transform: translateY(0);
+}
+
+.error {
+  color: #e63946;
+  background-color: rgba(230, 57, 70, 0.1);
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  border-left: 4px solid #e63946;
+}
